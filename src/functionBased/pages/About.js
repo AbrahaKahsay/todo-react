@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link, useRouteMatch, Route } from 'react-router-dom';
+import { Link, Route, useMatch } from 'react-router-dom';
 import SinglePage from './SinglePage';
 
 const About = () => {
-  const { url, path } = useRouteMatch();
+  const { url, path } = useMatch();
   return (
+    <>
     <div className="about__content">
       <ul className="about__list">
         <li>
@@ -18,6 +19,7 @@ const About = () => {
         <SinglePage />
       </Route>
     </div>
+    </>
   );
 };
 export default About;
